@@ -1,0 +1,64 @@
+<!doctype html>
+
+
+
+ <html class="no-js" lang=""> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Posts</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="INDEX, FOLLOW">
+        <link rel="stylesheet" href="http://whdoc.github.io/css/normalize.min.css">
+        <link rel="stylesheet" href="http://whdoc.github.io/css/main.css">
+    </head>
+    <body>
+        
+        <div class="header-container">
+            <header class="wrapper clearfix">
+               <a href="http://whdoc.github.io"> <h1 class="title">用Hugo创建文档网站</h1></a>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+      
+    
+    <article>
+        <header> 
+            <h1><a href="http://whdoc.github.io/post/hugo/"></a></h1>
+        </header>
+        1、安装Hugo 在Hugo Releases上下载Hugo应用程序，下载完成后将路径添加到系统环境变量path中。
+2、Hugo目录结构 通过命令hugo new xxx创建内容后，目录结构为：
+ content 存放markdown 文章。 data 存放数据文件。 layouts 网站模板文件。 static 图片、css、js 等静态资源。 themes 存放网站主题。 config.toml 网站的配置文件，hugo 同时还支持YAML格式或JSON格式。  3、下载主题 从主题列表选择适合的皮肤后下载，保存至themes文件夹，在后面运行Hugo时会用到。
+4、快速新建网站 在指定目录下新建网站，例如 hugo new site /xxx 即在xxx目录下新生成了网站。
+5、创建文章 在配置文件所在的项目目录（根目录）下创建页面，例如hugo new about.md即自动生成了一篇Makedown格式的文章。打开编辑about.md，编写你所需要呈现的内容。
+6、运行Hugo网站 在项目根目录执行调试命令hugo server --theme=xxx -buildDrafts，日志显示成功后在浏览器打开http://localhost:1313查看新建的文档网站。
+7、发布网站 将该文档网站发布到GitHub Page。
+ 在GitHub上创建一个Repository，命名为项目名.github.io 在根目录执行命令hugo --theme=xxx --baseUrl=&quot;http://项目名.github.io/&quot; 将生成的静态页面所在的public目录下的所有文件push到Repository的master分支。  8、访问github.io网站 在浏览器里访问http://项目名.github.io/获取全部项目文件。
+        </article>
+    
+       
+                     <div class="pager">
+                 <nav>
+                
+                
+                </nav>
+                 </div>
+                         
+
+
+           </div> 
+        </div> 
+       
+        <div class="footer-container">
+            <footer class="wrapper">
+                       <a href="http://whdoc.github.io"><h3>用Hugo创建文档网站</h3></a>
+            </footer>
+        </div>
+
+    </body>
+</html>

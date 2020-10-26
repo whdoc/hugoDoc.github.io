@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>用Hugo创建文档网站</title>
+    <link>http://whdoc.github.io/</link>
+    <description>Recent content on 用Hugo创建文档网站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://whdoc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://whdoc.github.io/about/</link>
+      <pubDate>Sun, 25 Oct 2020 22:05:28 +0800</pubDate>
+      
+      <guid>http://whdoc.github.io/about/</guid>
+      <description>测试启动网站</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://whdoc.github.io/post/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://whdoc.github.io/post/hugo/</guid>
+      <description>1、安装Hugo 在Hugo Releases上下载Hugo应用程序，下载完成后将路径添加到系统环境变量path中。
+2、Hugo目录结构 通过命令hugo new xxx创建内容后，目录结构为：
+ content 存放markdown 文章。 data 存放数据文件。 layouts 网站模板文件。 static 图片、css、js 等静态资源。 themes 存放网站主题。 config.toml 网站的配置文件，hugo 同时还支持YAML格式或JSON格式。  3、下载主题 从主题列表选择适合的皮肤后下载，保存至themes文件夹，在后面运行Hugo时会用到。
+4、快速新建网站 在指定目录下新建网站，例如 hugo new site /xxx 即在xxx目录下新生成了网站。
+5、创建文章 在配置文件所在的项目目录（根目录）下创建页面，例如hugo new about.md即自动生成了一篇Makedown格式的文章。打开编辑about.md，编写你所需要呈现的内容。
+6、运行Hugo网站 在项目根目录执行调试命令hugo server --theme=xxx -buildDrafts，日志显示成功后在浏览器打开http://localhost:1313查看新建的文档网站。
+7、发布网站 将该文档网站发布到GitHub Page。
+ 在GitHub上创建一个Repository，命名为项目名.github.io 在根目录执行命令hugo --theme=xxx --baseUrl=&amp;quot;http://项目名.github.io/&amp;quot; 将生成的静态页面所在的public目录下的所有文件push到Repository的master分支。  8、访问github.io网站 在浏览器里访问http://项目名.github.io/获取全部项目文件。</description>
+    </item>
+    
+  </channel>
+</rss>
