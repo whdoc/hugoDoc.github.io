@@ -21,14 +21,21 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://whdoc.github.io/post/hugo/</guid>
-      <description>1、安装Hugo 在Hugo Releases上下载Hugo应用程序，下载完成后将路径添加到系统环境变量path中。
-2、Hugo目录结构 通过命令hugo new xxx创建内容后，目录结构为：
- content 存放markdown 文章。 data 存放数据文件。 layouts 网站模板文件。 static 图片、css、js 等静态资源。 themes 存放网站主题。 config.toml 网站的配置文件，hugo 同时还支持YAML格式或JSON格式。  3、下载主题 从主题列表选择适合的皮肤后下载，保存至themes文件夹，在后面运行Hugo时会用到。
-4、快速新建网站 在指定目录下新建网站，例如 hugo new site /xxx 即在xxx目录下新生成了网站。
-5、创建文章 在配置文件所在的项目目录（根目录）下创建页面，例如hugo new about.md即自动生成了一篇Makedown格式的文章。打开编辑about.md，编写你所需要呈现的内容。
-6、运行Hugo网站 在项目根目录执行调试命令hugo server --theme=xxx -buildDrafts，日志显示成功后在浏览器打开http://localhost:1313查看新建的文档网站。
-7、发布网站 将该文档网站发布到GitHub Page。
- 在GitHub上创建一个Repository，命名为项目名.github.io 在根目录执行命令hugo --theme=xxx --baseUrl=&amp;quot;http://项目名.github.io/&amp;quot; 将生成的静态页面所在的public目录下的所有文件push到Repository的master分支。  8、访问github.io网站 在浏览器里访问http://项目名.github.io/获取全部项目文件。</description>
+      <description>Hugo是Go语言开发的静态网站生成器，能够帮助用户快速搭建文档网站。GitHub Page是GitHub免费为开发者提供的个人网站托管服务。
+下面就来简单介绍用Hugo创建文档网站并在Github Page上部署的方法。
+准备工作 安装好git和Go环境，记录操作系统和版本。
+1、安装Hugo 根据操作系统和版本在Hugo Releases上选择并下载对应版本的Hugo应用程序，下载完成后安装Hugo，并将安装路径添加到系统环境变量path中。 详细安装方法可参见官网。
+安装完成后需验证是否安装成功，在命令行输入以下命令：
+hugo version 若输出为版本信息表示安装成功。
+ 2、下载主题 从主题列表选择适合的皮肤后下载，保存至themes文件夹，在运行Hugo时会用到。
+ 3、快速新建网站 在项目文件夹下新建网站:（假定项目名称为project-name）
+hugo new site [project-name] 即在project-name目录下新生成了网站。 网站文件夹的目录结构为：
+ archetypes-存放默认头文件default.md content-存放markdown文章 data-存放数据文件 layouts-网站模板文件 static-图片、css、js等静态资源 themes-存放网站主题 config.toml-网站的配置文件，hugo 同时还支持YAML格式或JSON格式   4、创建文章 在配置文件所在的项目目录（根目录）下执行命令：
+hugo new about.md 即在content文件夹下自动生成了一篇Makedown格式的文章。打开编辑about.md，编写你所需要呈现的内容。如需设置文件夹，在执行命令时增加文件路径即可。
+ 5、运行Hugo网站 在项目根目录执行调试命令：
+hugo server --theme=xxx -buildDrafts 日志显示成功后在浏览器打开http://localhost:1313查看新建的文档网站。
+ 6、部署网站 将该文档网站发布到GitHub Page。
+ 在GitHub上创建一个Repository，命名为user-name.github.io，注意这里的user-name为GitHub账户名。 在根目录执行命令：  hugo --theme=xxx --baseUrl=&amp;#34;http://user-name.github.io/&amp;#34;  将生成的静态页面所在的public目录下的所有文件push到Repository的master分支。   7、设置GitHub Page 在GitHub Page的设置界面上配置访问的域名、分支和访问权限，便于其他人访问。</description>
     </item>
     
   </channel>

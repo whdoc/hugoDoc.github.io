@@ -30,46 +30,98 @@
         <header> 
             <h1><a href="http://whdoc.github.io/post/hugo/"></a></h1>
         </header>
-        <h2 id="1安装hugo">1、安装Hugo</h2>
-<p>在<a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a>上下载Hugo应用程序，下载完成后将路径添加到系统环境变量path中。</p>
-<h2 id="2hugo目录结构">2、Hugo目录结构</h2>
-<p>通过命令<code>hugo new xxx</code>创建内容后，目录结构为：</p>
+        <p>Hugo是Go语言开发的静态网站生成器，能够帮助用户快速搭建文档网站。GitHub Page是GitHub免费为开发者提供的个人网站托管服务。</p>
+<p>下面就来简单介绍用Hugo创建文档网站并在Github Page上部署的方法。</p>
+<h2 id="准备工作">准备工作</h2>
+<p>安装好git和Go环境，记录操作系统和版本。</p>
+<h2 id="1安装hugo">1、安装Hugo</h2>
+<p>根据操作系统和版本在<a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a>上选择并下载对应版本的Hugo应用程序，下载完成后安装Hugo，并将安装路径添加到系统环境变量path中。
+详细安装方法可参见<a href="https://gohugo.io/getting-started/installing/">官网</a>。</p>
+<p>安装完成后需验证是否安装成功，在命令行输入以下命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo version
+</code></pre></div><p>若输出为版本信息表示安装成功。</p>
+<hr>
+<h2 id="2下载主题">2、下载主题</h2>
+<p>从<a href="https://www.gohugo.org/theme/">主题列表</a>选择适合的皮肤后下载，保存至themes文件夹，在运行Hugo时会用到。</p>
+<hr>
+<h2 id="3快速新建网站">3、快速新建网站</h2>
+<p>在项目文件夹下新建网站:（假定项目名称为<em>project-name</em>）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site <span style="color:#f92672">[</span>project-name<span style="color:#f92672">]</span>
+</code></pre></div><p>即在<em>project-name</em>目录下新生成了网站。
+网站文件夹的目录结构为：</p>
 <ul>
-<li>content
-存放markdown 文章。</li>
-<li>data
-存放数据文件。</li>
-<li>layouts
-网站模板文件。</li>
-<li>static
-图片、css、js 等静态资源。</li>
-<li>themes
-存放网站主题。</li>
-<li>config.toml
-网站的配置文件，hugo 同时还支持YAML格式或JSON格式。</li>
+<li><em>archetypes</em>-存放默认头文件default.md</li>
+<li><em>content</em>-存放markdown文章</li>
+<li><em>data</em>-存放数据文件</li>
+<li><em>layouts</em>-网站模板文件</li>
+<li><em>static</em>-图片、css、js等静态资源</li>
+<li><em>themes</em>-存放网站主题</li>
+<li><em>config.toml</em>-网站的配置文件，hugo 同时还支持YAML格式或JSON格式</li>
 </ul>
-<h2 id="3下载主题">3、下载主题</h2>
-<p>从<a href="https://www.gohugo.org/theme/">主题列表</a>选择适合的皮肤后下载，保存至themes文件夹，在后面运行Hugo时会用到。</p>
-<h2 id="4快速新建网站">4、快速新建网站</h2>
-<p>在指定目录下新建网站，例如
-<code>hugo new site /xxx</code>
-即在xxx目录下新生成了网站。</p>
-<h2 id="5创建文章">5、创建文章</h2>
-<p>在配置文件所在的项目目录（根目录）下创建页面，例如<code>hugo new about.md</code>即自动生成了一篇Makedown格式的文章。打开编辑about.md，编写你所需要呈现的内容。</p>
-<h2 id="6运行hugo网站">6、运行Hugo网站</h2>
-<p>在项目根目录执行调试命令<code>hugo server --theme=xxx -buildDrafts</code>，日志显示成功后在浏览器打开<em>http://localhost:1313</em>查看新建的文档网站。</p>
-<h2 id="7发布网站">7、发布网站</h2>
+<hr>
+<h2 id="4创建文章">4、创建文章</h2>
+<p>在配置文件所在的项目目录（根目录）下执行命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new about.md
+</code></pre></div><p>即在content文件夹下自动生成了一篇Makedown格式的文章。打开编辑about.md，编写你所需要呈现的内容。如需设置文件夹，在执行命令时增加文件路径即可。</p>
+<hr>
+<h2 id="5运行hugo网站">5、运行Hugo网站</h2>
+<p>在项目根目录执行调试命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server --theme<span style="color:#f92672">=</span>xxx -buildDrafts
+</code></pre></div><p>日志显示成功后在浏览器打开<em>http://localhost:1313</em>查看新建的文档网站。</p>
+<hr>
+<h2 id="6部署网站">6、部署网站</h2>
 <p>将该文档网站发布到<em>GitHub Page</em>。</p>
 <ul>
-<li>在GitHub上创建一个Repository，命名为<em>项目名.github.io</em></li>
-<li>在根目录执行命令<code>hugo --theme=xxx --baseUrl=&quot;http://项目名.github.io/&quot;</code></li>
+<li>在GitHub上创建一个Repository，命名为<em>user-name.github.io</em>，注意这里的user-name为GitHub账户名。</li>
+<li>在根目录执行命令：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo --theme<span style="color:#f92672">=</span>xxx --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://user-name.github.io/&#34;</span>
+</code></pre></div><ul>
 <li>将生成的静态页面所在的public目录下的所有文件push到Repository的master分支。</li>
 </ul>
+<hr>
+<h2 id="7设置github-page">7、设置GitHub Page</h2>
+<p>在GitHub Page的设置界面上配置访问的域名、分支和访问权限，便于其他人访问。</p>
+<hr>
 <h2 id="8访问githubio网站">8、访问github.io网站</h2>
-<p>在浏览器里访问<code>http://项目名.github.io/</code>获取全部项目文件。</p>
+<p>在浏览器里访问<em><a href="http://user-name.github.io/">http://user-name.github.io/</a></em>，即可查看新建的文档网站，同时在GitHub上也可下载全部项目文件。</p>
 
         </article>
-        
+              <aside>
+                    <h3>目录</h3>
+                    <ul>
+                        
+                        
+                        <li>        
+                            准备工作
+                        </li>
+						<li>        
+                            1、安装Hugo
+                        </li>
+						<li>        
+                            2、下载主题
+                        </li>
+						<li>        
+                            3、快速新建网站
+                        </li>
+						<li>        
+                            4、创建文章
+                        </li>
+						<li>        
+                            5、运行Hugo网站
+                        </li>
+						<li>        
+                            6、部署网站
+                        </li>
+						<li>        
+                            7、设置GitHub Page
+                        </li>
+						<li>        
+                            8、访问github.io网站
+                        </li>
+                        
+                    </ul>
+                </aside>    
 
 
            </div> 
