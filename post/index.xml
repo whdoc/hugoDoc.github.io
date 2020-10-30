@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Hugo技术文档</title>
-    <link>http://whdoc.github.io/post/</link>
+    <link>https://whdoc.github.io/post/</link>
     <description>Recent content in Posts on Hugo技术文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Oct 2020 22:05:28 +0800</lastBuildDate><atom:link href="http://whdoc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2020 22:05:28 +0800</lastBuildDate><atom:link href="https://whdoc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>用Hugo创建文档网站</title>
-      <link>http://whdoc.github.io/post/hugo/</link>
+      <link>https://whdoc.github.io/post/hugo/</link>
       <pubDate>Sun, 25 Oct 2020 22:05:28 +0800</pubDate>
       
-      <guid>http://whdoc.github.io/post/hugo/</guid>
+      <guid>https://whdoc.github.io/post/hugo/</guid>
       <description>&lt;p&gt;Hugo是Go语言开发的静态网站生成器，能够帮助用户快速搭建文档网站。GitHub Page是GitHub免费为开发者提供的个人网站托管服务。
 下面就来简单介绍用Hugo创建文档网站并在Github Page上部署的方法。&lt;/p&gt;</description>
     </item>

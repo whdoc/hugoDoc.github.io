@@ -1,1 +1,3 @@
-theme: jekyll-theme-slate
+url: https://whdoc.github.io
+root: /whdoc
+theme: hugo-h5bp-simple
